@@ -1,0 +1,32 @@
+#include <string>
+#include <iostream>
+#include <vector>
+#include <bits/stdc++.h>
+
+
+
+class Item
+{
+
+  private:
+	std::string data;
+	int key;
+  
+	public:
+	std::string data;
+	int key;
+	Item(const char * _data, int _key): data { _data }, key(_key) {}
+};
+
+std::vector<Item> items = {
+	{"john", 2},
+	{"bill", 3},
+	{"joe", 1},
+	{"sara", 5},
+	{"foo", 4}
+};
+
+bool compareItem(Item *i1, Item *i2) {
+	return i1->getKey() < i2->getKey();
+}
+
